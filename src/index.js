@@ -4,6 +4,9 @@ import './styles/index.scss';
 import App from './App/App';
 import * as serviceWorker from './serviceWorker';
 
+// you won't touch this file once you setup the project
+
+// this is basically the printToDom functionality
 ReactDOM.render(
   <React.StrictMode>
     <App />
