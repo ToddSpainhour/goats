@@ -223,4 +223,12 @@ const goats = [
 
 const getGoats = () => goats;
 
-export default { getGoats }; // always export an object for stuff in the data folder
+const useGoat = (goatId) => {
+  goats.forEach((response) => {
+    if (response.id === goatId) {
+      response.isBusy = true;
+    }
+  });
+};
+
+export default { getGoats, useGoat }; // always export an object for stuff in the data folder
