@@ -13,15 +13,24 @@ class App extends React.Component {
 
   componentDidMount() {
     const goats = goatData.getGoats();
-    console.error('goats', goats);
+    // console.error('goats', goats);
     this.setState({ goats });
   }
+
 
 useAGoat = (goatId) => {
   goatData.useGoat(goatId);
   const goats = goatData.getGoats();
   this.setState({ goats });
 }
+
+
+freeAGoat = (goatId) => {
+  goatData.freeGoat(goatId);
+  const goats = goatData.getGoats();
+  this.setState({ goats });
+}
+
 
 render() {
   // inside the render - anything we need to modify the UI. loop over state? and loop over goats. changing what prints, calculation
@@ -30,7 +39,7 @@ render() {
   return (
     <div className="App">
       <h1>Goat Yoga LTD</h1>
-      <GoatCoral goats={goats} useAGoat={this.useAGoat}/>
+      <GoatCoral goats={goats} useAGoat={this.useAGoat} freeAGoat={this.freeAGoat}/>
     </div>
   );
 }
