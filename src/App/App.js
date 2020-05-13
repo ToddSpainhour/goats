@@ -25,7 +25,7 @@ useAGoat = (goatId) => {
 }
 
 
-freeTheGoat = (goatId) => {
+freeAGoat = (goatId) => {
   goatData.freeGoat(goatId);
   const goats = goatData.getGoats();
   this.setState({ goats });
